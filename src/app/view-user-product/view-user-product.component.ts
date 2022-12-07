@@ -7,6 +7,7 @@ import { ApiService } from '../api.service';
   styleUrls: ['./view-user-product.component.css']
 })
 export class ViewUserProductComponent {
+  title = ""
   constructor(private api: ApiService) {
     api.getProduct().subscribe(
       (response) => {
@@ -16,6 +17,26 @@ export class ViewUserProductComponent {
       }
     )
   }
+
+  readValues = () => {
+    let data: any = {
+      "title": this.title
+    }
+    if (this.title.length == 0) {
+      this.searchData = []
+    } else {
+      this.api.searchProduct(data).subscribe(
+        (response: any) => {
+          if (response.length == 0) {
+            this.searchData = []
+          } else {
+            this.searchData = response
+          }
+        }
+      )
+    }
+  }
+  searchData: any = []
   products: any = []
   loading: boolean = true
 }
