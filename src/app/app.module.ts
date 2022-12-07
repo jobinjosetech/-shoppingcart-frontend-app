@@ -11,6 +11,7 @@ import { UserLoginComponent } from './user-login/user-login.component';
 import { UserRegComponent } from './user-reg/user-reg.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { ViewAdminProductComponent } from './view-admin-product/view-admin-product.component';
+import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
 
 const myRoutes:Routes = [
   {
@@ -42,7 +43,8 @@ const myRoutes:Routes = [
     UserLoginComponent,
     UserRegComponent,
     AddProductComponent,
-    ViewAdminProductComponent
+    ViewAdminProductComponent,
+    AdminNavbarComponent
   ],
   imports: [
     BrowserModule,
