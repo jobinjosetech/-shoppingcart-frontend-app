@@ -36,7 +36,7 @@ export class UserRegComponent {
           this.confirmPassword = ""
           if (response.status == "success") {
             alert(response.message)
-            this.route.navigate(["/"])
+            this.route.navigate(["/userLogin"])
           } else {
             alert(response.message)
           }
