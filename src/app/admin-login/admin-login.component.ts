@@ -18,7 +18,7 @@ export class AdminLoginComponent {
     }
     if(this.username=='admin'&&this.password=='12345'){
       console.log(data)
-      this.route.navigate(['/addProduct'])
+      this.route.navigate(['/viewAdminProduct'])
     }else{
       alert("Invalid login credentials!!!")
     }
