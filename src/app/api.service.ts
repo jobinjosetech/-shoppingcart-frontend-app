@@ -14,4 +14,8 @@ export class ApiService {
   registerUser = (data:any) =>{
     return this.http.post("http://localhost:8080/userRegistration", data)
   }
+
+  addProduct = (data:any) =>{
+    return this.http.post("http://localhost:8080/addProducts", data)
+  }
 }
