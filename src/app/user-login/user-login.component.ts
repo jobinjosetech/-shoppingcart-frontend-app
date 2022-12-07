@@ -8,24 +8,24 @@ import { ApiService } from '../api.service';
   styleUrls: ['./user-login.component.css']
 })
 export class UserLoginComponent {
-  constructor(private api:ApiService, private route:Router){}
-  username=""
-  password=""
+  constructor(private api: ApiService, private route: Router) { }
+  email = ""
+  password = ""
 
-  readValues = ()=>{
-    let data:any = {
-      "username":this.username,
-      "password":this.password
+  readValues = () => {
+    let data: any = {
+      "email": this.email,
+      "password": this.password
     }
 
     this.api.loginUser(data).subscribe(
-      (response:any)=>{
-        this.username=""
-          this.password=""
-        if(response.status == "success"){
+      (response: any) => {
+        this.email = ""
+        this.password = ""
+        if (response.status == "success") {
           alert(response.message)
           this.route.navigate(["/"])
-        }else{
+        } else {
           alert(response.message)
         }
       }
