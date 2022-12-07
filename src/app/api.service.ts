@@ -22,4 +22,8 @@ export class ApiService {
   getProduct = ()=>{
     return this.http.get("http://localhost:8080/fetchProducts")
   }
+
+  searchProduct = (data:any)=>{
+    return this.http.post("http://localhost:8080/searchProducts",data)
+  }
 }
