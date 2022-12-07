@@ -25,6 +25,7 @@ export class AddProductComponent {
     }
     this.api.addProduct(data).subscribe(
       (response: any) => {
+        console.log(response)
         if (response.status == "success") {
           alert(response.message)
           this.title = ""
@@ -32,7 +33,7 @@ export class AddProductComponent {
           this.category = ""
           this.description = ""
           this.price = ""
-          // this.route.navigate(["/"])
+          this.route.navigate(["/viewAdminProduct"])
         } else {
           alert("Error on adding Friend")
         }
