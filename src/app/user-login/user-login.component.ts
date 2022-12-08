@@ -23,7 +23,6 @@ export class UserLoginComponent {
         this.email = ""
         this.password = ""
         if (response.status == "success") {
-          alert(response.message)
           this.route.navigate(["/viewUserProduct"])
         } else {
           alert(response.message)
