@@ -10,8 +10,7 @@
                     class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mb-5 d-flex justify-content-center">
                     <div style="width: 50%;" class="d-flex">
                         <input type="text" class="form-control mx-2" placeholder="🔍Search products..." name="title"
-                            [(ngModel)]="title">
-                        <button class="btn btn-outline-primary" (click)="readValues()">Search</button>
+                            [(ngModel)]="title" (ngModelChange)="readValues()">
                     </div>
                 </div>
 
