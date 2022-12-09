@@ -23,6 +23,9 @@ export class UserLoginComponent {
         this.email = ""
         this.password = ""
         if (response.status == "success") {
+          let userId = response.userId
+          console.log(userId)
+          localStorage.setItem("userInfo",userId)
           this.route.navigate(["/viewUserProduct"])
         } else {
           alert(response.message)
